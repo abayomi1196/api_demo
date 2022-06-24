@@ -11,6 +11,7 @@
   "author": "Abayomi Ayodele <samabayomi301@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.18"
   },
   "dependencies": {
