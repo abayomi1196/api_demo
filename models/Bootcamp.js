@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 // create bootcamp schema
-const BootcampSchema = new mongoose.Schema({
+const BootcampSchema = new Schema({
   name: {
     type: String,
     required: [true, "Please add a name"],
@@ -41,12 +42,10 @@ const BootcampSchema = new mongoose.Schema({
     // GeoJSON point
     type: {
       type: String,
-      enum: ["Point"],
-      required: true
+      enum: ["Point"]
     },
     coordinator: {
       type: [Number],
-      required: true,
       index: "2dsphere"
     },
     formattedAddress: String,
@@ -101,4 +100,4 @@ const BootcampSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model(BootcampSchema);
+module.exports = mongoose.model("Bootcamp", BootcampSchema);
